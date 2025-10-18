@@ -27,14 +27,14 @@ function WitheredFoxy() {
 
 export const settings = definePluginSettings({
     chance: {
-        description: "1/X chance",
+        description: "1 in X chance",
         type: OptionType.NUMBER,
         default: 1000,
     }
 });
 
 export default definePlugin({
-    name: "1/1000 chance withered foxy jumpscare",
+    name: "WitheredFoxyJumpscare",
     description: "Some actions now have a 1/1000 chance to be much funnier than before",
 
     authors: [
