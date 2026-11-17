@@ -53,13 +53,10 @@ export default definePlugin({
         return null;
     },
 
-    patches: [
-        {
-            find: ".stackingBehavior&&(",
-            replacement: {
-                match: /\.inactive\),children:(\i)/,
-                replace: ".inactive),children:[$1,$self.renderWitheredFoxy()]"
-            }
-        }
-    ]
+    start() {
+        setInterval(() => {
+            if (document.hasFocus())
+                renderWitheredFoxy();
+        }, 1000);
+    }
 });
